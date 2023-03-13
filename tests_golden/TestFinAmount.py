@@ -2,12 +2,12 @@
 # Copyright (C) 2018, 2019, 2020 Dominic O'Kane
 ##############################################################################
 
-from FinTestCases import FinTestCases, globalTestCaseMode
-from financepy.utils.currency import CurrencyTypes
-from financepy.utils.amount import Amount
 import sys
 sys.path.append("..")
 
+from FinTestCases import FinTestCases, globalTestCaseMode
+from financepy.utils.currency import CurrencyTypes
+from financepy.utils.amount import Amount
 
 testCases = FinTestCases(__file__, globalTestCaseMode)
 

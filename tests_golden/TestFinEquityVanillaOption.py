@@ -42,12 +42,19 @@ def test_EquityVanillaOption():
         call_option = EquityVanillaOption(
             expiry_date, 100.0, OptionTypes.EUROPEAN_CALL)
 
-        value = call_option.value(valuation_date, stock_price, discount_curve,
-                                  dividend_curve, model)
+        value = call_option.value(valuation_date, 
+                                  stock_price, 
+                                  discount_curve,
+                                  dividend_curve, 
+                                  model)
         start = time.time()
 
-        value_mc = call_option.value_mc(valuation_date, stock_price, discount_curve,
-                                        dividend_curve, model, num_paths)
+        value_mc = call_option.value_mc(valuation_date, 
+                                        stock_price, 
+                                        discount_curve,
+                                        dividend_curve, 
+                                        model, 
+                                        num_paths)
         end = time.time()
         duration = end - start
         testCases.print(num_paths, value, value_mc, duration)
